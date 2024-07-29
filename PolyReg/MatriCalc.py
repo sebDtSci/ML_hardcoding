@@ -43,6 +43,9 @@ degree = 2
 
 X_poly_train = polynomial_features(X_train, degree)
 coefficients = linear_regression(X_poly_train, y_train)
+
 X_poly_test = polynomial_features(X_test, degree)
+
 y_test_pred = X_poly_test @ coefficients
+
 print(y_test_pred)
